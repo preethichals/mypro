@@ -1,3 +1,4 @@
+import { Badge } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -26,8 +27,10 @@ function Topbar() {
             </NavDropdown>
 
             <Nav.Link href="#link">
-             
               Features
+              <Badge className="m-1">
+                <span>Hot</span>
+              </Badge>
             </Nav.Link>
             <Nav.Link href="#link">Blog</Nav.Link>
             <Nav.Link href="#link">About</Nav.Link>

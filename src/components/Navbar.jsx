@@ -3,18 +3,29 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
+import { FaUser, FaRegHeart, FaShoppingBag, FaHeart } from "react-icons/fa";
+
 
 function Topbar() {
+ 
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar
+      bg="light"
+      expand="lg"
+      className="shadow p-3 mb-4 bg-body-tertiary rounded"
+    >
       <Container>
         <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">Link</Nav.Link>
-            <NavDropdown title="Shop" id="basic-nav-dropdown">
+            <Nav.Link href="#link">Men</Nav.Link>
+            <Nav.Link href="#link">Women</Nav.Link>
+            <Nav.Link href="#link">Kids</Nav.Link>
+            <Nav.Link href="#link">Home & Living</Nav.Link>
+            <Nav.Link href="#link">Beauty</Nav.Link>
+            <NavDropdown title="More" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
                 Another action
@@ -25,17 +36,43 @@ function Topbar() {
                 Separated link
               </NavDropdown.Item>
             </NavDropdown>
-
             <Nav.Link href="#link">
               Features
               <Badge className="m-1">
                 <span>Hot</span>
               </Badge>
-            </Nav.Link>
-            <Nav.Link href="#link">Blog</Nav.Link>
-            <Nav.Link href="#link">About</Nav.Link>
-            <Nav.Link href="#link">Contact</Nav.Link>
+            </Nav.Link>{" "}
           </Nav>
+
+          <form className="d-flex flex-row-reverse m-auto" role="search">
+            <input
+              className="form-control me-2"
+              type="search"
+              placeholder="Search for products, brand and more"
+              aria-label="Search"
+            />
+          </form>
+
+          <div className="d-flex pl-1">
+            <div className="d-flex align-items-center flex-column p-1 mx-1">
+              <span>
+                <FaUser />
+              </span>
+              <span>Profile</span>
+            </div>
+            <div className="d-flex align-items-center flex-column p-1 mx-1">
+              <span>
+                <FaHeart />
+              </span>
+              <span>Wishlist</span>
+            </div>
+            <div className="d-flex align-items-center flex-column p-1 mx-1">
+              <span>
+                <FaShoppingBag />
+              </span>
+              <span>Cart</span>
+            </div>
+          </div>
         </Navbar.Collapse>
       </Container>
     </Navbar>

@@ -5,26 +5,20 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { FaUser, FaRegHeart, FaShoppingBag, FaHeart } from "react-icons/fa";
 
-
 function Topbar() {
- 
   return (
-    <Navbar
-      bg="light"
-      expand="lg"
-      className="shadow p-3 mb-4 bg-body-tertiary rounded"
-    >
+    <Navbar bg="light" expand="lg" className="shadow mb-4" sticky="top"  >
       <Container>
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+        <Navbar.Brand href="#home">Silvia Mellon</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">Men</Nav.Link>
-            <Nav.Link href="#link">Women</Nav.Link>
-            <Nav.Link href="#link">Kids</Nav.Link>
-            <Nav.Link href="#link">Home & Living</Nav.Link>
-            <Nav.Link href="#link">Beauty</Nav.Link>
+            <Nav.Link className="text-uppercase fw-semibold" href="#home">Home</Nav.Link>
+            <Nav.Link className="text-uppercase fw-semibold" href="#">Men</Nav.Link>
+            <Nav.Link className="text-uppercase fw-semibold" href="#">Women</Nav.Link>
+            <Nav.Link className="text-uppercase fw-semibold" href="#link">Kids</Nav.Link>
+            <Nav.Link className="text-uppercase fw-semibold" href="#link">Home & Living</Nav.Link>
+            <Nav.Link className="text-uppercase fw-semibold" href="#link">Beauty</Nav.Link>
             <NavDropdown title="More" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
